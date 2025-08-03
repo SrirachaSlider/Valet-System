@@ -29,12 +29,21 @@ int main() {
 		cin >> choice;
 		if (choice == 1) {
 			//When a car is added to the database, ensure to tell the user the ticket number (bec if there r 2 of the same car, you can use ticket number to retrieve it)
-			
+			ticket++;
+			int year;
+			string color, brand, model;
+			cout << "Enter the year of the car:\n";
+			cin >> year;
+			cout << "Enter the color, brand, and model of the car, respectively:\n";
+			cin >> color >> brand >> model;
+			Car c(year, color, brand, model);
+			car[ticket] = c;
+			cout << "Car has been parked. Ticket #: " << ticket << endl;
 		}
-		if (choice == 2) {
+		else if (choice == 2) {
 			// Use ticket to retrieve car
 			
 		}
-		if (choice == 3) break;
+		else break;
 	}
 }
